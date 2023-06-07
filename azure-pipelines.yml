@@ -71,7 +71,7 @@ stages:
             inputs:
               azureSubscription: 'Inform-your-subscription'
               appType: 'webAppLinux'
-              appName: 'angularwithazure'
+              appName: 'angularapp'
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               runtimeStack: 'NODE|16-lts'
 
