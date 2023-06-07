@@ -34,7 +34,7 @@ stages:
         displayName: "Run unit tests"
         inputs:
           script: |
-            cd AngularWithAzure/
+            cd angularapp/
             ng test --browsers=ChromeHeadless --code-coverage --watch=false
 
       - task: ArchiveFiles@2
