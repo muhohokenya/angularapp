@@ -52,25 +52,3 @@ stages:
               ArtifactName: 'drop'
               publishLocation: 'Container'
 
-
-  - stage: Acceptance
-    dependsOn: [ Development ]
-    displayName: 'Deploy to Acceptance'
-    jobs:
-      - job:  DeployToAcceptance
-        displayName: 'DeployAcceptance'
-        steps:
-          - script: echo Deploying to Acceptance
-  - stage: Production
-    displayName: 'Deploy to Production'
-    jobs:
-      - deployment: DeployProduction
-        pool:
-          vmImage: 'ubuntu-latest'
-        environment: Production
-        strategy:
-          runOnce:
-            deploy:
-              steps:
-                - script: echo Deploying to Production
-
