@@ -62,7 +62,6 @@ stages:
         steps:
           - script: echo Deploying to Acceptance
   - stage: Production
-    dependsOn: [ Acceptance ]
     displayName: 'Deploy to Production'
     jobs:
       - deployment: DeployProduction
@@ -74,4 +73,4 @@ stages:
             deploy:
               steps:
                 - script: echo Deploying to Production
-     
+
